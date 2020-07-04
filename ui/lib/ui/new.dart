@@ -14,7 +14,11 @@ class New extends StatefulWidget {
 }
 
 class NewState extends State {
-  String name = "", location = "", bio = "", username = "";
+  String img = "https://img.icons8.com/windows/96/000000/github.png",
+      name = "",
+      location = "",
+      bio = "",
+      username = "";
   Map data;
 
   var user = '';
@@ -28,9 +32,14 @@ class NewState extends State {
     this.user = _textController.text;
     print("Username : " + this.user);
     fetchData();
-
     Timer(Duration(seconds: 2), () {
-      setState(() {});
+      setState(() {
+        this.name = data['name'];
+        this.location = data["location"];
+        this.bio = data['bio'];
+        this.username = data['login'];
+        this.img = data['avatar_url'];
+      });
     });
   }
 
@@ -44,11 +53,6 @@ class NewState extends State {
     // print(response.body.length);
 
     this.data = json.jsonDecode(response.body);
-
-    this.name = data['name'];
-    this.location = data["location"];
-    this.bio = data['bio'];
-    this.username = data['login'];
 
     check = false;
 
@@ -66,17 +70,9 @@ class NewState extends State {
       appBar: new AppBar(
         backgroundColor: Colors.black,
         title: Text(
-          "Fuck2",
+          "AndGit",
         ),
         centerTitle: true,
-        actions: [
-          new IconButton(
-              icon: Icon(
-                Icons.menu,
-                color: Colors.white,
-              ),
-              onPressed: null)
-        ],
       ),
       body: new Container(
         child: ListView(
@@ -87,9 +83,12 @@ class NewState extends State {
                 new Row(
                   children: [
                     new Container(
+                      alignment: Alignment.center,
                       // padding: const EdgeInsets.only(top: 20.0),
-                      child: Image.asset(
-                        "images/me.png",
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30.0)),
+                      child: new Image.network(
+                        img,
                         height: 100.0,
                         width: 100.0,
                       ),
@@ -99,6 +98,7 @@ class NewState extends State {
                     new Column(
                       children: [
                         new Container(
+                          padding: const EdgeInsets.only(left: 20.0),
                           child: _buildText(
                               name, 30.0, FontWeight.w900, Colors.black),
                         ),
@@ -112,7 +112,39 @@ class NewState extends State {
                 ),
               ],
             ),
-            statusSec,
+            new Container(
+              margin: const EdgeInsets.only(top: 20.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                // borderRadius: BorderRadius.only(
+                //     topLeft: Radius.circular(10),
+                //     topRight: Radius.circular(10),
+                //     bottomLeft: Radius.circular(10),
+                //     bottomRight: Radius.circular(10)),
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 0,
+                    blurRadius: 5,
+                    offset: Offset(0, 5), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: new Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  new IconButton(
+                      icon: Icon(Icons.settings_backup_restore),
+                      // padding: const EdgeInsets.all(40.0),
+                      onPressed: null),
+                  new Expanded(
+                    child: _buildText("Automating & Exploring", 18.0,
+                        FontWeight.w600, Colors.black),
+                  ),
+                ],
+              ),
+            ),
             new Container(
               margin: const EdgeInsets.only(top: 20.0),
               alignment: Alignment.center,
@@ -130,7 +162,7 @@ class NewState extends State {
         // onRefresh: fetchData,
       ),
       floatingActionButton: new FloatingActionButton(
-        child: new Icon(Icons.refresh),
+        child: new Icon(Icons.search),
         onPressed: () {
           changeUsername();
         },
@@ -156,40 +188,6 @@ class NewState extends State {
     );
   }
 }
-
-Widget statusSec = new Container(
-  margin: const EdgeInsets.only(top: 20.0),
-  decoration: BoxDecoration(
-    color: Colors.white,
-    // borderRadius: BorderRadius.only(
-    //     topLeft: Radius.circular(10),
-    //     topRight: Radius.circular(10),
-    //     bottomLeft: Radius.circular(10),
-    //     bottomRight: Radius.circular(10)),
-    borderRadius: BorderRadius.circular(10.0),
-    boxShadow: [
-      BoxShadow(
-        color: Colors.grey.withOpacity(0.5),
-        spreadRadius: 0,
-        blurRadius: 5,
-        offset: Offset(0, 5), // changes position of shadow
-      ),
-    ],
-  ),
-  child: new Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      new IconButton(
-          icon: Icon(Icons.settings_backup_restore),
-          // padding: const EdgeInsets.all(40.0),
-          onPressed: null),
-      new Expanded(
-        child: _buildText(
-            "Automating & Exploring", 18.0, FontWeight.w600, Colors.black),
-      ),
-    ],
-  ),
-);
 
 Text _buildText(String text, size, weight, color) {
   return Text(

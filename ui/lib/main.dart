@@ -5,7 +5,7 @@ import './ui/new.dart';
 void main(List<String> args) {
   runApp(
     new MaterialApp(
-      title: "UI Tutorial",
+      title: "AndGit",
       home: new New(),
     )
   );
