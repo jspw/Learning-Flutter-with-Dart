@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/foysal/Documents/flutter/project/srmc_app/flutter_sifat/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/foysal/.gradle/caches/transforms-2/files-2.1/a37d7647168a444700eada6776a3f208/appcompat-1.0.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

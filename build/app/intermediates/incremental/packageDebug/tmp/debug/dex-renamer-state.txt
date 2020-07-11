@@ -1,0 +1,4 @@
+#Sun Jul 12 00:32:09 BDT 2020
+base.0=/home/foysal/Documents/flutter/project/srmc_app/flutter_sifat/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
