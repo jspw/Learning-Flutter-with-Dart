@@ -15,6 +15,7 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="alarm"
         android:icon="@mipmap/ic_launcher">
+<<<<<<< HEAD
         <service
             android:name="io.flutter.plugins.androidalarmmanager.AlarmService"
             android:permission="android.permission.BIND_JOB_SERVICE"
@@ -29,6 +30,8 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"></action>
             </intent-filter>
         </receiver>
+=======
+>>>>>>> 3f5421bc60a19b4ee7cef09c565e359a892c1670
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -67,7 +70,24 @@
 
         		<!-- things for alarm management -->
 
+<<<<<<< HEAD
 
+=======
+<service
+    android:name="io.flutter.plugins.androidalarmmanager.AlarmService"
+    android:permission="android.permission.BIND_JOB_SERVICE"
+    android:exported="false"/>
+<receiver
+    android:name="io.flutter.plugins.androidalarmmanager.AlarmBroadcastReceiver"
+    android:exported="false"/>
+<receiver
+    android:name="io.flutter.plugins.androidalarmmanager.RebootBroadcastReceiver"
+    android:enabled="false">
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+    </intent-filter>
+</receiver>
+>>>>>>> 3f5421bc60a19b4ee7cef09c565e359a892c1670
 
         
     </application>
