@@ -99,7 +99,6 @@ class HomeState extends State {
         },
         child: Icon(Icons.mouse),
         backgroundColor: Colors.green,
-        mouseCursor: MouseCursor.defer,
       ),
     );
   }
