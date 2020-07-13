@@ -136,7 +136,7 @@ class _AlarmHomePageState extends State<_AlarmHomePage> {
               key: ValueKey('RegisterOneShotAlarm'),
               onPressed: () async {
                 await AndroidAlarmManager.oneShot(
-                  const Duration(seconds: 10),
+                  Duration(seconds: 2),
                   // Ensure we have a unique alarm ID.
                   Random().nextInt(pow(2, 31)),
                   callback,

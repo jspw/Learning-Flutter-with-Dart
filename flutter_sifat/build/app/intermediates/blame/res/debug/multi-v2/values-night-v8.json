@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/foysal/Documents/flutter/project/srmc_app/flutter_sifat/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/jspw/Documents/Projects/Learning Flutter/flutter_sifat/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/foysal/.gradle/caches/transforms-2/files-2.1/a37d7647168a444700eada6776a3f208/appcompat-1.0.0/res/values-night-v8/values-night-v8.xml",
+                    "source": "/home/jspw/.gradle/caches/transforms-2/files-2.1/a37d7647168a444700eada6776a3f208/appcompat-1.0.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

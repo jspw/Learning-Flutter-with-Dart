@@ -10,6 +10,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
+
         android:label="fluttersifat"
         android:icon="@mipmap/ic_launcher">
 
