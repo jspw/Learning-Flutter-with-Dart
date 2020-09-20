@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:launcher/apps.dart';
 import 'package:vector_math/vector_math.dart' as math;
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart';
 
 class New extends StatelessWidget {
   var scaffoldKey = GlobalKey<ScaffoldState>();
@@ -31,8 +31,9 @@ class New extends StatelessWidget {
     // throw UnimplementedErro
     return Scaffold(
       drawer: Container(
-        color: Colors.pink.withOpacity(0.6),
+        color: Colors.pink.withOpacity(0.5),
         height: MediaQuery.of(context).size.height,
+        width: 60.0,
         child: Column(
           children: <Widget>[
             SizedBox(
@@ -40,9 +41,12 @@ class New extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () => Apps(context),
-              child: Image.asset(
-                "assets/images/icon.png",
-                fit: BoxFit.cover,
+              child: Container(
+                width: 35,
+                child: Image.asset(
+                  "assets/images/icon.png",
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             buildIcons(
@@ -60,7 +64,7 @@ class New extends StatelessWidget {
               ),
             ),
             buildIcons(
-              () => print("Hello"),
+              () => print("object"),
               Icon(
                 Icons.camera,
                 color: Colors.white,
@@ -87,7 +91,7 @@ class New extends StatelessWidget {
         key: scaffoldKey,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/wallpaper.jpeg"),
+                image: AssetImage("assets/images/wallpaper.jpg"),
                 fit: BoxFit.cover)),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,

@@ -1,26 +1,41 @@
-import 'package:basic/ui/grid_tile.dart';
 import 'package:flutter/material.dart';
-import './ui/home.dart';
-import 'ui/grid_view_extent.dart';
-import './ui/list_tile.dart';
-import './ui/stack.dart';
-import './ui/card.dart';
-import './ui/main_screen.dart';
-import './ui/pass_arg_to_route.dart';
-import './ui/route.dart';
 
-void main() {
-  runApp(
-    new MaterialApp(
-      title: "Basic Flutter",
-      // home: Home(),
-      // home: GridViewExtent(),
-      // home: List_Tile(),
-      // home: StackClass(),
-      // home: CardClass(),
-      // home: MainScreen(),
-      // home: MyApp(),
-      home: Routes(),
-    ),
-  );
+void main() => runApp(new MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => new MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'msc',
+      home: new DefaultTabController(
+        length: 2,
+        child: ListView(
+          children: <Widget>[
+            Expanded(
+              child: new TabBar(
+                tabs: [new Text("Lunches"), new Text("Cart")],
+              ),
+            ),
+            Expanded(
+              child: TabBarView(
+                children: <Widget>[
+                  new Column(
+                    children: <Widget>[new Text("Lunches Page")],
+                  ),
+                  new Column(
+                    children: <Widget>[new Text("Cart Page")],
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

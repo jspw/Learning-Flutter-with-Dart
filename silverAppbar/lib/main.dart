@@ -5,6 +5,7 @@ void main() {
   runApp(MaterialApp(
     title: "SilverAppBar",
     home: new Home(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 

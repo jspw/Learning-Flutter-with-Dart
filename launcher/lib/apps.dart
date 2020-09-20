@@ -17,32 +17,32 @@ class _MyAppsState extends State<MyApps> {
       backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: Text('Installed applications'),
-        actions: <Widget>[
-          PopupMenuButton<String>(
-            itemBuilder: (BuildContext context) {
-              return <PopupMenuItem<String>>[
-                PopupMenuItem<String>(
-                    value: 'system_apps', child: Text('Toggle system apps')),
-                PopupMenuItem<String>(
-                  value: 'launchable_apps',
-                  child: Text('Toggle launchable apps only'),
-                )
-              ];
-            },
-            onSelected: (String key) {
-              if (key == 'system_apps') {
-                setState(() {
-                  _showSystemApps = !_showSystemApps;
-                });
-              }
-              if (key == 'launchable_apps') {
-                setState(() {
-                  _onlyLaunchableApps = !_onlyLaunchableApps;
-                });
-              }
-            },
-          )
-        ],
+        // actions: <Widget>[
+        //   PopupMenuButton<String>(
+        //     itemBuilder: (BuildContext context) {
+        //       return <PopupMenuItem<String>>[
+        //         PopupMenuItem<String>(
+        //             value: 'system_apps', child: Text('Toggle system apps')),
+        //         PopupMenuItem<String>(
+        //           value: 'launchable_apps',
+        //           child: Text('Toggle launchable apps only'),
+        //         )
+        //       ];
+        //     },
+        //     onSelected: (String key) {
+        //       if (key == 'system_apps') {
+        //         setState(() {
+        //           _showSystemApps = !_showSystemApps;
+        //         });
+        //       }
+        //       if (key == 'launchable_apps') {
+        //         setState(() {
+        //           _onlyLaunchableApps = !_onlyLaunchableApps;
+        //         });
+        //       }
+        //     },
+        //   )
+        // ],
       ),
       body: _ListAppsPagesContent(
           includeSystemApps: _showSystemApps,
