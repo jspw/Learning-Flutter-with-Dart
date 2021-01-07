@@ -10,6 +10,7 @@ void main() {
       theme: ThemeData(
         backgroundColor: Colors.white,
         primaryColor: Colors.white,
+        accentColor: Colors.green
         // canvasColor: Colors.lightGreen,
       ),
       initialRoute: '/',

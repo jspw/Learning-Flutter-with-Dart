@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
   folding_cell: "^1.0.0"
 
 

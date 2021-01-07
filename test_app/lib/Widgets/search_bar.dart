@@ -22,7 +22,7 @@ class SearchBar extends StatelessWidget {
           suffixIcon: IconButton(
               icon: Icon(
                 Icons.search,
-                color: Colors.pink,
+                color: Colors.green,
               ),
               onPressed: () => print("Clicked")),
           // hintText: "Search Food or Restaurants",

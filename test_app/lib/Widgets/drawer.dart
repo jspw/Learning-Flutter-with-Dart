@@ -21,7 +21,7 @@ class DrawerState extends State {
           Container(
             padding: const EdgeInsets.all(10.0),
             height: 150.0,
-            color: Colors.pink,
+            color: Colors.green,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +62,7 @@ class DrawerState extends State {
                 "My Profile",
                 Icon(
                   Icons.edit,
-                  color: Colors.pink,
+                  color: Colors.green,
                 ),
               ),
               OptionsBuilder(
@@ -71,7 +71,7 @@ class DrawerState extends State {
                 "My Orders",
                 Icon(
                   Icons.list,
-                  color: Colors.pink,
+                  color: Colors.green,
                 ),
               ),
               OptionsBuilder(
@@ -80,7 +80,7 @@ class DrawerState extends State {
                 "My Addresses",
                 Icon(
                   Icons.location_on,
-                  color: Colors.pink,
+                  color: Colors.green,
                 ),
               ),
               OptionsBuilder(
@@ -89,7 +89,7 @@ class DrawerState extends State {
                 "Help Center",
                 Icon(
                   Icons.help,
-                  color: Colors.pink,
+                  color: Colors.green,
                 ),
               ),
               SizedBox(

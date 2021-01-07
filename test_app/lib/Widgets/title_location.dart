@@ -73,7 +73,7 @@ class TitleLocationState extends State {
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.pink,
+                      color: Colors.green
                     ),
                   ),
                 ),
@@ -99,7 +99,7 @@ class TitleLocationState extends State {
                     child: GestureDetector(
                       child: Icon(
                         Icons.arrow_drop_up,
-                        color: Colors.pink,
+                        color: Colors.green
                       ),
                       onTap: () => print("Location"),
                     )),

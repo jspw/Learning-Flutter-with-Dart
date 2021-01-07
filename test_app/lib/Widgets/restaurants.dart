@@ -21,7 +21,7 @@ class RestaurantsState extends State {
     return ListBody(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+          padding: const EdgeInsets.only(left: 20.0, top: 10.0),
           child: Text(
             "Nearby Restaurants",
             style: TextStyle(
@@ -33,12 +33,12 @@ class RestaurantsState extends State {
         ),
         ListView.builder(
             controller: ScrollController(),
-            physics: ScrollPhysics(),
+            physics: BouncingScrollPhysics(),
             shrinkWrap: true,
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
               return Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.only(left: 10.0,bottom: 10.0),
                 child: GestureDetector(
                   onTap: () => Navigator.pushNamed(context, Restaurant.route,
                       arguments: {"x": x}),
@@ -64,9 +64,9 @@ class RestaurantsState extends State {
                           child: Hero(
                             tag: x++,
                             child: Image(
-                              image: AssetImage("assets/images/img.jpg"),
-                              height: 100.0,
-                              width: 100.0,
+                              image: AssetImage("assets/images/restaurant.jpg"),
+                              height: 110.0,
+                              width: 200.0,
                               fit: BoxFit.cover,
                             ),
                           ),

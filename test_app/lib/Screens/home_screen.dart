@@ -47,7 +47,7 @@ class HomeScreenState extends State {
               leading: IconButton(
                 icon: Icon(
                   Icons.person,
-                  color: Colors.pink,
+                  color: Colors.green,
                 ),
                 onPressed: () => _scaffoldKey.currentState.openDrawer(),
               ),
@@ -57,11 +57,11 @@ class HomeScreenState extends State {
                 IconButton(
                     icon: Icon(
                       Icons.shopping_cart,
-                      color: Colors.pink,
+                      color: Colors.green,
                     ),
                     onPressed: null)
               ],
-              expandedHeight: 430.0,
+              expandedHeight: 380.0,
               flexibleSpace: new FlexibleSpaceBar(
                 collapseMode: CollapseMode.parallax,
                 background: Container(
@@ -84,12 +84,15 @@ class HomeScreenState extends State {
               delegate: SliverChildListDelegate(
                 [
                   Restaurants(),
+                  
                 ],
               ),
             ),
           ],
         ),
       ),
+
+      
       drawer: DrawerX(),
     );
   }

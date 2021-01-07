@@ -6,7 +6,7 @@ class BestSeller extends StatelessWidget {
   _buildRecentOrder(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10.0),
-      width: 250.0,
+      width: 150.0,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15.0),
@@ -16,45 +16,48 @@ class BestSeller extends StatelessWidget {
         ),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              // crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Padding(padding: const EdgeInsets.symmetric(vertical: 5.0)),
-                Stack(children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: Image(
-                        image: AssetImage('assets/images/img.jpg'),
-                        height: 150.0,
-                        width: 230.0,
-                        fit: BoxFit.cover),
-                  ),
-                  offer
-                      ? Positioned(
-                          top: 10.0,
-                          // left: 5.0,
-                          child: Container(
-                            alignment: Alignment.center,
-                            color: Colors.pink,
-                            height: 25.0,
-                            width: 80.0,
-                            child: Text(
-                              "20% OFF",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 15.0,
+                Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image(
+                          image: AssetImage('assets/images/food.jpeg'),
+                          height: 120.0,
+                          width: 150.0,
+                          fit: BoxFit.cover),
+                    ),
+                    offer
+                        ? Positioned(
+                            top: 10.0,
+                            // left: 5.0,
+                            child: Container(
+                              alignment: Alignment.center,
+                              color: Colors.green,
+                              height: 25.0,
+                              width: 80.0,
+                              child: Text(
+                                "20% OFF",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15.0,
+                                ),
                               ),
                             ),
-                          ),
-                        )
-                      : Text(""),
-                ]),
+                          )
+                        : Text(""),
+                  ],
+                ),
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.all(12.0),
+                    margin: EdgeInsets.all(8.0),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,7 +69,7 @@ class BestSeller extends StatelessWidget {
                             Text(
                               "Chicken Grill",
                               style: TextStyle(
-                                fontSize: 18.0,
+                                fontSize: 15.0,
                                 fontWeight: FontWeight.bold,
                               ),
                               overflow: TextOverflow.ellipsis,
@@ -77,7 +80,7 @@ class BestSeller extends StatelessWidget {
                             Text(
                               "Vojon Bilash",
                               style: TextStyle(
-                                fontSize: 16.0,
+                                fontSize: 15.0,
                                 fontWeight: FontWeight.normal,
                               ),
                               overflow: TextOverflow.ellipsis,
@@ -96,20 +99,18 @@ class BestSeller extends StatelessWidget {
                           ],
                         ),
                         Container(
-                          // alignment: Alignment.center,
-                          // color: Colors.pink,
-                          margin: EdgeInsets.only(right: 10.0),
-                          width: 48.0,
+                          width: 35.0,
+                          height: 35,
                           decoration: BoxDecoration(
-                            color: Colors.pink,
+                            color: Colors.green,
                             borderRadius: BorderRadius.circular(35.0),
                           ),
                           child: IconButton(
                             icon: Icon(
                               Icons.add,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
-                            iconSize: 25.0,
+                            iconSize: 20.0,
                             color: Colors.white,
                             onPressed: () {},
                           ),
@@ -145,7 +146,7 @@ class BestSeller extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.only(left: 10.0),
-          height: 280.0,
+          height: 230.0,
           child: ListView.builder(
             physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
